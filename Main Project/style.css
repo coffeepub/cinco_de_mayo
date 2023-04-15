@@ -30,7 +30,6 @@ background-image: url(images/Cinco\ De\ Mayo\ Doodle\ Illustration.svg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: 50% 20%;
-
 }
 /* End of Common Style*/
 
@@ -41,7 +40,7 @@ background-position: 50% 20%;
   background-color: #000;
   position: fixed;
   top: -14rem;
-  z-index: 1;
+  z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +61,7 @@ background-position: 50% 20%;
  justify-content: center;
  align-items: center;
  opacity: 0;
- transition: color 0.3s;
+ transition: color 0.3s, opacity 0.2s;
 }
 
 .change .navbar-link{
@@ -70,23 +69,23 @@ opacity: 1;
 }
 
 .change .navbar-link:nth-child(1){
-  transition: opacity 0.4s 0.5s;
+  transition: opacity 0.4s 0.4s, color 0.3s;
 }
 
 .change .navbar-link:nth-child(2){
-  transition: opacity 0.4s 0.1s;
+  transition: opacity 0.4s 0.5s, color 0.3s;
 }
 
 .change .navbar-link:nth-child(3){
-  transition: opacity .4s .6s;
+  transition: opacity .4s .6s, color 0.3s;
 }
 
 .change .navbar-link:nth-child(4){
-  transition: opacity .4s .7s;
+  transition: opacity .4s .7s, color 0.3s;
 }
 
 .change .navbar-link:nth-child(5){
-  transition: opacity .4s .8s;
+  transition: opacity .4s .8s, color 0.3s;
 }
 
 .change .navbar-link:nth-child(6){
@@ -115,7 +114,7 @@ font-size: 7rem;
   position: fixed;
   top:1rem;
   left: 5rem;
-  z-index: 1rem;
+  z-index: 1;
   border-radius: 30rem 30rem 15rem 15rem;
   box-shadow: 0.1rem .1rem .5rem #00000043;
   cursor: pointer;
@@ -294,7 +293,7 @@ justify-content: space-evenly;
   width: 0.2rem;
   height: 0%;
   background-color: #ffff;
-  z-index: 10;
+  z-index: 1;
   transition: height 0.5s;
 }
 .gallery-link:hover::before{
@@ -354,7 +353,7 @@ justify-content: space-evenly;
 
 .food-description{
   position: absolute;
-  bottom: 3vw;
+  bottom: 1vw;
   left: 2rem;
   width: 70%;
   font-size: 1.5rem;
@@ -444,3 +443,111 @@ color: #17ad67;
   text-align: center;
 }
 /* End of Section 4 */
+
+/* Responsive */
+@media (max-width: 1400px) {
+  html{
+    font-size: 50%;
+  }
+  .section-2{
+    height: auto;
+    padding: 10rem 0 12rem 0;
+  }
+
+  .cards-container{
+    margin-top: 10rem;
+  }
+
+  .gallery-link{
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+
+  .food-img{
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    .section-heading{
+      font-size: 9rem;
+      margin: 0 5rem;
+    }
+    .cinco-icon{
+      transform: scale(3);
+      padding-bottom: 3rem;   
+    }
+    .cards-container{
+      flex-wrap: wrap;
+    }
+
+    .card{
+      margin: 5rem;
+    }
+
+    .section-4{
+      height: 30rem;
+    }
+  }
+  @media(max-width: 900px){
+    .navbar-link{
+      margin: 2rem;
+    }
+    .navbar-link i{
+      font-size: 4rem;
+    }
+    .navbar-link span{
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 700px) {
+    .section-heading{
+      font-size: 7rem;
+      margin: 2 10rem;
+      padding-top: 4rem;
+    }
+    .cinco-icon{
+      transform: scale(2);
+      padding-bottom: 3rem;   
+    }
+
+    .menu{
+      left: 2rem;
+    }
+
+
+.section-1{
+  background-image: url(images/Cinco\ De\ Mayo\ Doodle\ Illustration.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 20% 70%;
+  }
+
+  .section-4{
+    height: 40rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .section-4-text{
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  html{
+    font-size: 40%;
+  }
+  .navbar-link{
+    margin: 0 0.7rem;
+  }
+  .menu-bar-text{
+    padding-top: 45px;
+    padding-left: 2px;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+  }
+}
+/* End of Responsive */
